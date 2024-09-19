@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="croissantage_view_form" model="ir.ui.view">
+        <field name="name">croissant.view.form</field>
+        <field name="model">croissantage</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable':1}"/>
+                    <button string="Validation" name="act_validate" type="object"
+                            invisible="state == 'done'"
+                            class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group>
+                        <group>
+                            <field name="partner_ids" widget="many2many_tags" string="Croissanteur" />
+                            <field name="date_begin"/>
+                            <field name="duration" />
+                            <field name="city"/>
+                        </group>
+                        <group>
+                            <field name="partner_id" domain="[('is_company','=', False)]" string="Croissanté" />
+                            <field name="date_end" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="croissantage_view_tree" model="ir.ui.view">
+        <field name="name">croissantage.view.tree</field>
+        <field name="model">croissantage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="partner_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="croissantage_action" model="ir.actions.act_window">
+        <field name="name">Croissantage</field>
+        <field name="res_model">croissantage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="croissantage_menu"
+        name="Croissantage"
+        action="croissantage_action"
+        web_icon="module,static/description/icon.png"
+    />
+</odoo>
