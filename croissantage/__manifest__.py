@@ -9,6 +9,8 @@
         'contacts',
     ],
     'data': [
+        'security/croissantage_security.xml',
+        'security/ir.model.access.csv',
         'views/croissantage_event.xml',
         'views/res_partner.xml'
     ],

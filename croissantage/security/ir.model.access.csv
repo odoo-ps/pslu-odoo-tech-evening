@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+croissantage.access_croissantage_event,access_croissantage_event,croissantage.model_croissantage_event,croissantage.group_croissantage_user,1,0,0,0
+croissantage.manage_croissantage_event,manage_croissantage_event,croissantage.model_croissantage_event,croissantage.group_croissantage_manager,1,1,1,1
