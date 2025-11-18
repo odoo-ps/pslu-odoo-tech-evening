@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="croissantage_event_demo_1" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Don't leave your desk unlocked (#🥐ed)</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15'), ref('base.res_partner_address_28')])]"/>
+        <field name="date_start" eval="DateTime.today() + relativedelta(days=-2)" />
+    </record>
+    <record id="croissantage_event_demo_2" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Told you!</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="DateTime.today() + relativedelta(days=-10)" />
+        <field name="date_end" eval="DateTime.today() + relativedelta(days=-3)" />
+    </record>
+    <record id="croissantage_event_demo_3" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Too late mate 😉</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10'), ref('base.res_partner_address_25'), ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="DateTime.today() + relativedelta(days=-7)" />
+    </record>
+</odoo>

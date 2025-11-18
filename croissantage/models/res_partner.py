@@ -3,13 +3,13 @@ from odoo import models, fields
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    croissantage_ids = fields.One2many('croissantage', 'partner_id')
+    croissantage_event_ids = fields.One2many('croissantage.event', 'croissanted_id')
 
     def create(self, vals):
         partners = super().create(vals)
         for partner in partners:
-            self.env['croissantage'].create({
+            self.env['croissantage.event'].create({
                 'name': 'Welcome !',
-                'partner_id': partner.id
+                'croissanted_id': partner.id
             })
         return partners
