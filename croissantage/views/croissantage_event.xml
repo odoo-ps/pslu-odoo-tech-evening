@@ -6,8 +6,9 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="state" widget="statusbar" options="{'clickable': 1}"/>
-                    <button string="Validate" name="act_validate" type="object" invisible="state == 'done'" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" options="{'clickable': 1}" groups="croissantage.group_croissantage_manager"/>
+                    <field name="state" widget="statusbar" options="{'clickable': 0}" groups="!croissantage.group_croissantage_manager"/>
+                    <button string="Validate" name="act_validate" type="object" invisible="state == 'done'" class="oe_highlight" groups="croissantage.group_croissantage_manager"/>
                 </header>
                 <sheet>
                     <div class="oe_title">
