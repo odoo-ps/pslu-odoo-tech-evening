@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="page_croissantage" model="website.page">
+        <field name="name">Page Croissantage</field>
+        <field name="url">/page_croissantage</field>
+        <field name="website_published">True</field>
+        <field name="type">qweb</field>
+        <field name="key">croissantage.page_croissantage</field>
+        <field name="arch" type="xml">
+            <t t-name="page_croissantage">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty h-100">
+                        <div class="container filter_croissantage">
+                            <div class="oe_structure" id="oe_structure_croissantage"/>
+                            <div class="d-flex flex-column">
+                                <h3>Croissantage</h3>
+                                <a href="/new_croissantage">Ajouter</a>
+                                <input type="text" id="filter_name" name="filter_name" placeholder="Enter here .." class="form-control bg-white"/>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item "
+                                        t-foreach="events"
+                                        t-as="croissanted_id" 
+                                        t-att-data-name="croissanted_id.name"
+                                        >
+                                        <h5 
+                                            class="title_croissantage"
+                                            t-field="croissanted_id.name"/>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"
+                                                t-foreach="events[croissanted_id]"
+                                                t-as="event">
+                                                <span class="badge text-bg-success"
+                                                    t-field="event.date_start" />
+                                                <span t-field="event.name"/>
+
+                                                <span t-foreach="event.croissanter_ids"
+                                                    t-as="croissanter_id"
+                                                    class="badge text-bg-primary"
+                                                    t-field="croissanter_id.name" />
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="oe_structure" id="oe_structure_croissantage_bottom"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="new_croissantage" model="website.page">
+        <field name="name">Nouveau Croissantage</field>
+        <field name="url">/new_croissantage</field>
+        <field name="website_published">True</field>
+        <field name="type">qweb</field>
+        <field name="key">croissantage.new_croissantage</field>
+        <field name="arch" type="xml">
+            <t t-name="new_croissantage">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty h-100">
+                        <div class="container">
+                            <div class="oe_structure" id="oe_structure_new_croissantage"/>
+                            <div class="d-flex flex-column">
+                                <h3>Ajouter un croissantage</h3>
+                                <form action="/add_croissantage" method="post" class=" container-fluid">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    
+                                    <div class="form-group row  mb-3">
+                                        <label class="col-sm-3 col-form-label" for="input_name">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="input_name" placeholder="Ex: ..." />
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row">
+                                        <div class="offset-sm-3 col-sm-9">
+                                            <button type="submit" class="btn btn-primary">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="oe_structure" id="oe_structure_new_croissantage_bottom"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    
+</odoo>

@@ -1,25 +1,1677 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
+<odoo>
     <record id="croissantage_event_demo_1" model="croissantage.event">
         <field name="state">new</field>
-        <field name="name">Don't leave your desk unlocked (#🥐ed)</field>
-        <field name="croissanted_id" ref="base.res_partner_address_16"/>
-        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15'), ref('base.res_partner_address_28')])]"/>
-        <field name="date_start" eval="DateTime.today() + relativedelta(days=-2)" />
+        <field name="name">Oups, j'ai oublié de verrouiller</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3'), ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-14 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
     </record>
+
     <record id="croissantage_event_demo_2" model="croissantage.event">
         <field name="state">done</field>
-        <field name="name">Told you!</field>
-        <field name="croissanted_id" ref="base.res_partner_address_5"/>
-        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
-        <field name="date_start" eval="DateTime.today() + relativedelta(days=-10)" />
-        <field name="date_end" eval="DateTime.today() + relativedelta(days=-3)" />
+        <field name="name">Win+L n'est pas une option</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-08 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
     </record>
+
     <record id="croissantage_event_demo_3" model="croissantage.event">
         <field name="state">ongoing</field>
-        <field name="name">Too late mate 😉</field>
+        <field name="name">Encore toi ?!</field>
         <field name="croissanted_id" ref="base.res_partner_address_5"/>
-        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10'), ref('base.res_partner_address_25'), ref('base.res_partner_address_11')])]"/>
-        <field name="date_start" eval="DateTime.today() + relativedelta(days=-7)" />
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11'), ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-12 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_4" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Merci pour le petit déj</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_5" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le stagiaire a frappé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4'), ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-12 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_6" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Pain au chocolat exigé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_7" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Erreur fatale</field>
+        <field name="croissanted_id" ref="base.res_partner_address_30"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10'), ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-03 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_8" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Je t'avais prévenu</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-14 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-18 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_9" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Croissantage en réunion</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_10" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">C'est la règle !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7'), ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_11" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La vengeance est un plat qui se mange sucré</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-11 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-12 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_12" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Hackerman 🕵️‍♂️</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1'), ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-18 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_13" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Tu vas payer cher</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_14" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Ctrl+Alt+Suppr c'est gratuit</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-02 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-04 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_15" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Miam miam 🥐</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_12'), ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_16" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">On a faim !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_17" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Deuxième fois cette semaine</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-03 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_18" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Régalez-nous</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7'), ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_19" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Je prendrai un pain suisse</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-18 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_20" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">C'était facile</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-26 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_21" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Encore et toujours</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-02 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_22" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Bim dans le panneau</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30'), ref('base.res_partner_12')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-09 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_23" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">J'avais faim</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-17 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_24" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Piqué !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_25" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le classique</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10'), ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_26" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La gaffe</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-10-12 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_27" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Ne lâche rien</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_25'), ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-18 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_28" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Je choisis la boulangerie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_29" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La faille de sécurité</field>
+        <field name="croissanted_id" ref="base.res_partner_address_33"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-02 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-11-05 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_30" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Café offert ?</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14'), ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-09 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_31" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Alerte rouge</field>
+        <field name="croissanted_id" ref="base.res_partner_12"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_32" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Chouquettes acceptées</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-11-23 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_33" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Le vendredi c'est permis</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-27 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_34" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Oups</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_35" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pas d'excuse</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13'), ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-12-08 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_36" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Tu vas te ruiner</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_37" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Je fais la liste</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10'), ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_38" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Trop facile</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-01-22 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_39" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session ouverte...</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17'), ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-14 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_40" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">A vos marques</field>
+        <field name="croissanted_id" ref="base.res_partner_address_30"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_41" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Tu n'apprendras jamais</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13'), ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-27 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_42" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">L'addition s'il vous plaît</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-28 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_43" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">C'est dommage</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24'), ref('base.res_partner_address_25')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-30 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_44" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Bingo !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-21 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_45" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">La porte était grande ouverte</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13'), ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_46" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">PC en libre service</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_47" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le gourmand</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11'), ref('base.res_partner_address_28')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-12 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-14 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_48" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Le boss régale</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_49" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Il suffisait d'un instant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16'), ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-18 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_50" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Joyeux Noël en avance</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-12-24 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record><record id="croissantage_event_demo_51" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">La gaffe du matin</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-22 09:15:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_52" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Ctrl+Alt+Suppr oublié</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32'), ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-25 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-09 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_53" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Opération viennoiserie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-02 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_54" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de l'inattention</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_55" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Bureau en libre accès</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-12 11:45:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_56" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Régalez-nous !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4'), ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-18 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-05 16:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_57" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">L'addition sera sucrée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_58" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session orpheline</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-01 14:20:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_59" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le retour du bâton (beurré)</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-05 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_60" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Sécurité 0 - Croissants 1</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-12 09:10:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_61" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Alerte Pain au Chocolat</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-15 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-30 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_62" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Ecran d'accueil public</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-22 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_63" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pas de quartier pour les miettes</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-02 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_64" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">La boulangerie m'attend</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-05 09:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_65" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Erreur fatale, petit déj royal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-10 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-20 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_66" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session ouverte...</field>
+        <field name="croissanted_id" ref="base.res_partner_address_30"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_25')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-15 15:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_67" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Infiltration gourmande réussie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_33"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-23 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_68" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le syndicat du croissant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-28 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_69" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Un oubli qui coûte cher</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-02 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-17 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_70" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Post-it révélateur</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-08 11:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_71" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La loi du croustillant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-12 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-13 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_72" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Opération beurre salé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-18 09:20:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_73" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Faille exploitée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_28')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-22 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_74" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Chausson aux pommes mérité</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-28 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-10 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_75" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Vigipirate Croissant 2</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-02 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_76" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Mot de passe fragile</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-08 10:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_77" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Session fantôme piégée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-12 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-13 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_78" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le roi de la pâte feuilletée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-18 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_79" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Audit de pause café</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_80" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Inadvertance coupable</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-28 16:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_81" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Dette de beurre honorée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-02 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-03 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_82" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Chouquettes en commande</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-08 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_83" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Porte dérobée... ou ouverte</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-12 11:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_84" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de la liberté (d'accès)</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-16 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-31 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_85" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Brioche pour tous</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-22 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_86" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Alerte sécurité Slack</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-28 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_87" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Festin du vendredi</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-01 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_88" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Miam miam Odoo</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_89" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">L'oubli fatal du midi</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-10 13:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_90" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pain au chocolat exigé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-28 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_91" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Régalez le service !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_92" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session fantôme nocturne</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-25 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_93" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Beurre salé pour tous</field>
+        <field name="croissanted_id" ref="base.res_partner_address_33"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-01 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_94" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Infiltration viennoiserie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_30"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_95" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Faille critique gourmande</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-10 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_96" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le gourou des miettes</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-15 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-25 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_97" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Alerte Chausson</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-20 09:15:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_98" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">L'oubli du vendredi soir</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-25 17:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_99" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Audit de sécurité boulangère</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-01 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-10-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_100" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Pique-nique de session</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record><record id="croissantage_event_demo_101" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Oubli de session post-déjeuner</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-20 13:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_102" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Vengeance du consultant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-01-26 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_103" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Alerte sécurité au marketing</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_25')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-05 09:15:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_104" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Dette technique en chouquettes</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13'), ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-10 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-25 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_105" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">PC en libre-service</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-28 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_106" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Faille exploitée avec brio</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_107" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Opération beurre doux</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-12 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_108" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Le gourmand du 3ème étage</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-18 11:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_109" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Audit de session matinal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-22 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-05 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_110" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le roi du chausson aux pommes</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32'), ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_111" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session fantôme</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-10 15:45:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_112" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de la distraction</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-16 12:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_113" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Boulangerie en vue</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_114" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le stagiaire régale</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-10 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_115" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Ecran d'accueil non verrouillé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-01 10:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_116" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Double ration de beurre</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-05 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_117" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Pause café fatale</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-12 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_118" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Erreur de débutant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-20 14:15:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_119" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La loi du croissantage</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-08 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_120" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Viennoiseries en attente</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_121" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Win+L n'est plus une option</field>
+        <field name="croissanted_id" ref="base.res_partner_address_33"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-05 11:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_122" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le grand festin</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-11 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_123" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Sécurité 0 - Gourmandise 1</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_124" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de la confiance</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-20 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-04 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_125" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Hackerman du lundi</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_126" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pain au chocolat mérité</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_127" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Audit de session surprise</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_128" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La gaffe du manager</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-25 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_129" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session déverrouillée au café</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-15 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_130" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Infiltration gourmande</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-07-21 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_131" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Alerte beurre salé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_132" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Dette de viennoiserie payée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-15 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_133" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Piégé pendant la pause</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-05 10:45:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_134" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Régalez-nous !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-11 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_135" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le gourou du petit déj</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_136" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">L'oubli fatal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-04 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_137" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Ecran d'accueil public</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-25 15:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_138" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Session abandonnée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_139" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Miam miam Odoo</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_140" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Piégé par le collègue</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-25 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_141" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Faille de sécurité gourmande</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-15 11:15:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_142" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de l'inattention</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-21 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_143" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">La boulangerie m'attend</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_144" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Vengeance sucrée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-10-15 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_145" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session ouverte...</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-05 16:45:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_146" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Dette de beurre honorée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-10-11 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_147" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Audit de pause café</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_148" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Erreur fatale, petit déj royal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-11-04 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_149" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Le gourmand du service</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-25 11:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_150" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">L'oubli du vendredi soir</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-11-02 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record><record id="croissantage_event_demo_151" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Inadvertance coupable</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-28 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_152" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Hack du matin</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-05 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-06 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_153" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Boulangerie en vue</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_25')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_154" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le roi du croissant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-05 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_155" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Oups</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-10 11:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_156" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pas de pitié</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-16 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_157" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">L'alerte a sonné</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_158" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Piqué !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_34')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-02 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_159" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Festin matinal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-10 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-24 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_160" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Beurre salé ou doux ?</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_161" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Fin du premier bloc</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-05 15:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_162" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La gaffe du matin</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-15 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-16 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_163" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Opération viennoiserie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_164" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de l'inattention</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-15 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_165" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Bureau en libre accès</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_7')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-10 10:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_166" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Régalez-nous !</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-20 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-21 16:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_167" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">L'addition sera sucrée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_168" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session orpheline</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-10 14:20:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_169" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le retour du bâton (beurré)</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-07-20 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-04 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_170" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Sécurité 0 - Croissants 1</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_31')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-05 09:10:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_171" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Alerte Pain au Chocolat</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-15 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-08-16 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_172" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Ecran d'accueil public</field>
+        <field name="croissanted_id" ref="base.res_partner_address_2"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_3')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-08-25 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_173" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pas de quartier pour les miettes</field>
+        <field name="croissanted_id" ref="base.res_partner_address_4"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-15 10:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_174" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">La boulangerie m'attend</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-10 09:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_175" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Erreur fatale, petit déj royal</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-09-20 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-09-21 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_176" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Session ouverte...</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-01 15:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_177" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Infiltration gourmande réussie</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-10-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-10-25 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_178" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le syndicat du croissant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_179" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Un oubli qui coûte cher</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-10 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-11-11 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_180" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Post-it révélateur</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_32')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-11-20 11:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_181" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">La loi du croustillant</field>
+        <field name="croissanted_id" ref="base.res_partner_address_1"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_2')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-01 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-12-15 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_182" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Opération beurre salé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_3"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-10 09:20:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_183" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Faille exploitée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_5"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-15 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_184" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Chausson aux pommes mérité</field>
+        <field name="croissanted_id" ref="base.res_partner_address_7"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-12-20 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-12-21 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_185" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Vigipirate Croissant 2</field>
+        <field name="croissanted_id" ref="base.res_partner_address_10"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_14')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_186" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Mot de passe fragile</field>
+        <field name="croissanted_id" ref="base.res_partner_address_15"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_16')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-01-20 10:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_187" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Session fantôme piégée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_17"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-01 08:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-15 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_188" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Le roi de la pâte feuilletée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_24"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_30')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-10 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_189" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Audit de pause café</field>
+        <field name="croissanted_id" ref="base.res_partner_address_28"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-02-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-02-21 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_190" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Inadvertance coupable</field>
+        <field name="croissanted_id" ref="base.res_partner_address_31"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_10')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-01 16:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_191" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Dette de beurre honorée</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_1')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-10 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-03-25 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_192" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Chouquettes en commande</field>
+        <field name="croissanted_id" ref="base.res_partner_address_13"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_33')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-03-20 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_193" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Porte dérobée... ou ouverte</field>
+        <field name="croissanted_id" ref="base.res_partner_address_14"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_17')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-05 11:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_194" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Le prix de la liberté (d'accès)</field>
+        <field name="croissanted_id" ref="base.res_partner_address_16"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_5')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-15 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-04-16 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_195" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Brioche pour tous</field>
+        <field name="croissanted_id" ref="base.res_partner_address_11"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_27')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-04-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_196" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">Alerte sécurité Slack</field>
+        <field name="croissanted_id" ref="base.res_partner_address_25"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_13')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-05 14:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_197" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Festin du vendredi</field>
+        <field name="croissanted_id" ref="base.res_partner_address_27"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_4')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-05-15 08:30:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-05-30 18:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_198" model="croissantage.event">
+        <field name="state">ongoing</field>
+        <field name="name">Miam miam Odoo</field>
+        <field name="croissanted_id" ref="base.res_partner_address_32"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_11')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-05 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_199" model="croissantage.event">
+        <field name="state">new</field>
+        <field name="name">L'oubli fatal du midi</field>
+        <field name="croissanted_id" ref="base.res_partner_address_33"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_24')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-15 13:30:00', '%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="croissantage_event_demo_200" model="croissantage.event">
+        <field name="state">done</field>
+        <field name="name">Pain au chocolat exigé</field>
+        <field name="croissanted_id" ref="base.res_partner_address_34"/>
+        <field name="croissanter_ids" eval="[Command.set([ref('base.res_partner_address_15')])]"/>
+        <field name="date_start" eval="datetime.strptime('2026-06-25 09:00:00', '%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_end" eval="datetime.strptime('2026-06-26 17:00:00', '%Y-%m-%d %H:%M:%S')"/>
     </record>
 </odoo>
